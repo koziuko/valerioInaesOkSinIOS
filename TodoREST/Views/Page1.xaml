@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValerioInaes.Views.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Buscar entidad"
+                
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Entidad" />
+            <Entry x:Name="buscarEntry" Text="{Binding Path=buscarEntry}" Placeholder="" />
+            <Label Text="Denominaion" />
+            <Entry x:Name="notesEntry" Text="{Binding Path=Notes}" />
+            <Label Text="Esta activa" />
+            <Switch x:Name="doneSwitch" IsToggled="{Binding Path=Done}" />
+            
+            <Button Text="Buscar" Clicked="OnBuscarActivated" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

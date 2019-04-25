@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="TodoREST.TodoItemPage" 
+    
+             
+			 Title="Inaes Demo Valerio ">
+    <ScrollView>
+    <StackLayout x:Name="slPerfil" Margin="20" VerticalOptions="StartAndExpand" >
+		<Label Text="Entidad" />
+		<Entry x:Name="nameEntry" Text="{Binding Path=Name}" Placeholder="cuit" />
+		<Label Text="Denominacion" />
+		<Entry x:Name="notesEntry" Text="{Binding Path=Notes}" />
+		<Label Text="Esta activa" />
+		<Switch x:Name="doneSwitch" IsToggled="{Binding Path=Done}" />
+
+        <Button Text="Buscar" Clicked="OnBuscarActivated" />
+
+        <Button Text="Grabar" Clicked="OnSaveActivated" />
+		<Button Text="Borrar" Clicked="OnDeleteActivated" />
+		<Button Text="Cancelar" Clicked="OnCancelActivated" />
+		
+        <Button Text="Valerio" Clicked="OnSpeakActivated" />
+        <Button Text="Generar QR" Clicked="Handle_Clicked" />
+
+
+        <Entry x:Name="FotoText" Placeholder="Texto para la foto" StyleClass="MainEntry"  />
+
+        <Image x:Name="MainImage"></Image>
+        <Label x:Name="PathLabel"></Label>
+        <Button Text="Taggear Foto" Clicked="CameraButton_Clicked" />
+        <Button Text="Ver Tags" Clicked="ShowTags" />
+
+        
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
